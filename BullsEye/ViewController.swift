@@ -18,9 +18,8 @@ class ViewController: UIViewController {
     var currentRound: Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
-        guessValue.text = getRandomNumber()
-        scoreValue.text = "0"
-        roundValue.text = String(currentRound)
+        startNewRound()
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -57,6 +56,12 @@ class ViewController: UIViewController {
     }
      func changeCurrentValue(forValue value: Float) {
          currentValue =  lroundf(value)
+        
+    }
+    func startNewRound(){
+        guessValue.text = getRandomNumber()
+        scoreValue.text = "0"
+        roundValue.text = String(currentRound)
         
     }
 }
